@@ -2,4 +2,5 @@ lib/bower_components
 lib/node_modules
 css/
 lib/src
-.sass-cache
+lib/.sass-cache
+.DS_Store
