@@ -10,17 +10,17 @@
 <!-- TODO: Initialize our app -->
 <body ng-app="ToDoApp">
   <!-- TODO: Add a nav controller -->
-  <div ng-include="'partials/navbar.html'"></div>
 <!-- use single qoute inside double quote -->
   <!-- TODO: Add a controller for our todo list -->
-
+  <div ng-controller="TopCtrl" >
+  <div ng-include="'partials/navbar.html'"></div>
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 main-container">
 <!-- this will inject our partials -->
         <div class="col-xs-12" ng-view></div>
         </div>
       </div>
-
+  </div>
 
 <!-- 3rd party libraries -->
 <script type="text/javascript" src="lib/src/lib/jquery/dist/jquery.min.js"></script>
@@ -28,16 +28,22 @@
 </script>
 <script type="text/javascript" src="lib/src/lib/angular/angular.min.js"></script>
 <script src="/lib/src/lib/angular-route/angular-route.min.js"></script>
+<script src="lib/src/lib/firebase/firebase.js"></script>
 <!-- App specific files  -->
 <script type="text/javascript" src="app/app.js"></script>
 <!-- providers files  -->
+<script type="text/javascript" src="app/values/fb-cred.js"></script>
 <script type="text/javascript" src="app/factories/itemFactory.js"></script>
 <script type="text/javascript" src="app/factories/FilterFactory.js"></script>
+<script type="text/javascript" src="app/factories/AuthFactory.js"></script>
 <!-- controllers files  -->
 <!-- <script type="text/javascript" src="app/controllers/TodoCtrl.js"></script> -->
+<script type="text/javascript" src="app/controllers/LoginCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/TopCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/itemListCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/itemNewCtrl.js"></script>
 <script type="text/javascript" src="app/controllers/itemViewCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/itemEditCtrl.js"></script>
 </body>
 </html>
